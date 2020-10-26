@@ -32,7 +32,7 @@ function App() {
     <div className="App">
       <header className="head">
         <img className="head__logo" src={logo} alt="Spotify logo" />
-        <h1 className="head__title">Artists Search Form</h1>
+        <h1 className="head__title">Artists Search Form - Test</h1>
       </header>
       <section className="filters">
         <ul className="filters__list">
