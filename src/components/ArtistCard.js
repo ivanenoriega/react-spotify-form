@@ -1,6 +1,8 @@
+import artistLogo from "./assets/images/artist-logo.svg";
+
 function ArtistCard() {
     return (
-        <li key={i + "_artist"} className="artist">
+        <li className="artist">
             <Heart className="artist__like" />
             <img className="artist__logo" src={artistLogo} alt="artist logo" />
             <h2 className="artist__title">Nombre del artista</h2>
