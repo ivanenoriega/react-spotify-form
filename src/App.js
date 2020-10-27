@@ -34,7 +34,7 @@ function App() {
         <Select title="Genero" className="filters__item"/>
         <Select title="Popularidad" className="filters__item"/>
         <Select title="Seguidores" className="filters__item"/>
-        <Favorite />
+        <Favorite check={true}/>
       </Nav>
       <section className="artists">
         <ul className="artists__list">{artists}</ul>
