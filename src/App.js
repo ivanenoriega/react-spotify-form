@@ -8,11 +8,20 @@ import Search from "./components/Search";
 import "./App.css";
 
 function App() {
-  const artists = [];
+    const artists = [];
 
-  for (let i = 0; i < artistsList.length; i++) {
-    artists.push(<ArtistCard />);
-  }
+    for (let i = 0; i < artistsList.length; i++) {
+        artists.push(
+            <ArtistCard
+                liked={false}
+                url={artistsList[i].images[2].url}
+                name={artistsList[i].name}
+                followers={artistsList[i].followers.total}
+                stars={artistsList[i].popularity}
+            />
+        );
+    }
+
 
   return (
     <div className="App">
@@ -22,16 +31,17 @@ function App() {
       </header>
       <Nav>
         <Search />
-        <Select title="Genero" />
-        <Select title="Popularidad" />
-        <Select title="Seguidores" />
-        <Favorite check={true} />
+        <Select title="Genero" className="filters__item"/>
+        <Select title="Popularidad" className="filters__item"/>
+        <Select title="Seguidores" className="filters__item"/>
+        <Favorite check={true}/>
       </Nav>
       <section className="artists">
         <ul className="artists__list">{artists}</ul>
       </section>
     </div>
   );
+
 }
 
 export default App;
