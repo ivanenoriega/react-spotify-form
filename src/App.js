@@ -8,11 +8,20 @@ import Search from "./components/Search";
 import "./App.css";
 
 function App() {
-  const artists = [];
+    const artists = [];
 
-  for (let i = 0; i < artistsList.length; i++) {
-    artists.push(<ArtistCard />);
-  }
+    for (let i = 0; i < artistsList.length; i++) {
+        artists.push(
+            <ArtistCard
+                liked={false}
+                url={artistsList[i].images[2].url}
+                name={artistsList[i].name}
+                followers={artistsList[i].followers.total}
+                stars={artistsList[i].popularity}
+            />
+        );
+    }
+
 
   return (
     <div className="App">
@@ -32,6 +41,7 @@ function App() {
       </section>
     </div>
   );
+
 }
 
 export default App;
