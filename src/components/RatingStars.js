@@ -33,6 +33,7 @@ class RatingStars extends React.Component {
         break;
 
       default:
+        amount = 0;
         break;
     }
 
