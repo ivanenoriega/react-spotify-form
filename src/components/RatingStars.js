@@ -12,24 +12,24 @@ class RatingStars extends React.Component {
     let amount;
 
     switch (this.props) {
-      case this.props > 20:
-        amount = 1;
+      case this.props >= 80:
+        amount = 5;
         break;
 
-      case this.props > 40:
-        amount = 2;
-        break;
-
-      case this.props > 60:
-        amount = 3;
-        break;
-
-      case this.props > 80:
+      case this.props >= 60:
         amount = 4;
         break;
 
-      case this.props <= 80:
-        amount = 5;
+      case this.props >= 40:
+        amount = 3;
+        break;
+
+      case this.props >= 20:
+        amount = 2;
+        break;
+
+      case this.props < 20:
+        amount = 1;
         break;
 
       default:
