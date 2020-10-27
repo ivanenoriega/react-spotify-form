@@ -14,7 +14,7 @@ class RatingStars extends React.Component {
         {2 <= amount ? <StarFull className="artist__star"/>  : <StarEmpty className="artist__star"/> }
         {3 <= amount ? <StarFull className="artist__star"/>  : <StarEmpty className="artist__star"/> }
         {4 <= amount ? <StarFull className="artist__star"/>  : <StarEmpty className="artist__star"/> }
-        {5 == amount ? <StarFull className="artist__star"/>  : <StarEmpty className="artist__star"/> }
+        {5 === amount ? <StarFull className="artist__star"/>  : <StarEmpty className="artist__star"/> }
         </div>
     );
   }
