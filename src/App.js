@@ -25,7 +25,7 @@ function App() {
         <Select title="Genero" />
         <Select title="Popularidad" />
         <Select title="Seguidores" />
-        <Favorite />
+        <Favorite check={true} />
       </Nav>
       <section className="artists">
         <ul className="artists__list">{artists}</ul>
