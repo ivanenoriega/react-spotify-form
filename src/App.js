@@ -22,9 +22,9 @@ function App() {
       </header>
       <Nav>
         <Search />
-        <Select title="Genero" />
-        <Select title="Popularidad" />
-        <Select title="Seguidores" />
+        <Select title="Genero" className="filters__item"/>
+        <Select title="Popularidad" className="filters__item"/>
+        <Select title="Seguidores" className="filters__item"/>
         <Favorite />
       </Nav>
       <section className="artists">
