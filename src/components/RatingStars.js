@@ -1,28 +1,20 @@
 import React from "react";
-import { ReactComponent as Star } from "./../assets/images/star-empty.svg"
+import { ReactComponent as Star } from "./../assets/images/star-empty.svg";
 
-class RatingStars extends React.Component{
+class RatingStars extends React.Component {
+  determinePopularity = () => {};
 
-    constructor(){
-        super();
-
-    }
-    
-    determinePopularity = () => {
-    
-    }
-
-    render(){
-        return(
-            <div className="artist__stars">
-            <Star className="artist__star" />
-            <Star className="artist__star" />
-            <Star className="artist__star" />
-            <Star className="artist__star" />
-            <Star className="artist__star" />
-          </div>
-        )
-    }
+  render() {
+    return (
+      <div className="artist__stars">
+        <Star className="artist__star" />
+        <Star className="artist__star" />
+        <Star className="artist__star" />
+        <Star className="artist__star" />
+        <Star className="artist__star" />
+      </div>
+    );
+  }
 }
 
 export default RatingStars;
