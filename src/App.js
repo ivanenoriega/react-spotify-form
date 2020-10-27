@@ -21,10 +21,17 @@ function App() {
         <h1 className="head__title">Artists Search Form - Test</h1>
       </header>
       <Nav>
+<<<<<<< Updated upstream
         <Search />
         <Select title="Genero" />
         <Select title="Popularidad" />
         <Select title="Seguidores" />
+=======
+        <Search className="filters__item" placeholder="Nombre" value=""/>
+        <Select title="Genero" className="filters__item"/>
+        <Select title="Popularidad" className="filters__item"/>
+        <Select title="Seguidores" className="filters__item"/>
+>>>>>>> Stashed changes
         <Favorite />
       </Nav>
       <section className="artists">
