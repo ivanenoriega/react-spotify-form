@@ -1,50 +1,21 @@
 import React from "react";
-import { ReactComponent as Star } from "./../assets/images/star-empty.svg";
+import { ReactComponent as StarEmpty } from "./../assets/images/star-empty.svg";
+import { ReactComponent as StarFull } from "./../assets/images/star.svg";
 
 class RatingStars extends React.Component {
-  determinePopularity = () => {};
-
   render() {
-    this.props = 68;
-
     //DETERMINE AMOUNT OF STARS
+    let amount =  Math.floor(this.props.stars / 20) ;
 
-    let amount;
-
-    switch (this.props) {
-      case this.props >= 80:
-        amount = 5;
-        break;
-
-      case this.props >= 60:
-        amount = 4;
-        break;
-
-      case this.props >= 40:
-        amount = 3;
-        break;
-
-      case this.props >= 20:
-        amount = 2;
-        break;
-
-      case this.props < 20:
-        amount = 1;
-        break;
-
-      default:
-        amount = 0;
-        break;
-    }
 
     return (
       <div className="artist__stars">
-        <Star className="artist__star" />
-        <Star className="artist__star" />
-        <Star className="artist__star" />
-        <Star className="artist__star" />
-        <Star className="artist__star" />
-      </div>
+        {1 <= amount ? <StarFull className="artist__star"/>  : <StarEmpty className="artist__star"/> }
+        {2 <= amount ? <StarFull className="artist__star"/>  : <StarEmpty className="artist__star"/> }
+        {3 <= amount ? <StarFull className="artist__star"/>  : <StarEmpty className="artist__star"/> }
+        {4 <= amount ? <StarFull className="artist__star"/>  : <StarEmpty className="artist__star"/> }
+        {5 == amount ? <StarFull className="artist__star"/>  : <StarEmpty className="artist__star"/> }
+        </div>
     );
   }
 }
