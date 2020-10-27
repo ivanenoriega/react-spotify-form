@@ -22,24 +22,26 @@ function App() {
         );
     }
 
-    return (
-        <div className="App">
-            <header className="head">
-                <img className="head__logo" src={logo} alt="Spotify logo" />
-                <h1 className="head__title">Artists Search Form - Test</h1>
-            </header>
-            <Nav>
-                <Search />
-                <Select title="Genero" />
-                <Select title="Popularidad" />
-                <Select title="Seguidores" />
-                <Favorite />
-            </Nav>
-            <section className="artists">
-                <ul className="artists__list">{artists}</ul>
-            </section>
-        </div>
-    );
+
+  return (
+    <div className="App">
+      <header className="head">
+        <img className="head__logo" src={logo} alt="Spotify logo" />
+        <h1 className="head__title">Artists Search Form - Test</h1>
+      </header>
+      <Nav>
+        <Search />
+        <Select title="Genero" className="filters__item"/>
+        <Select title="Popularidad" className="filters__item"/>
+        <Select title="Seguidores" className="filters__item"/>
+        <Favorite />
+      </Nav>
+      <section className="artists">
+        <ul className="artists__list">{artists}</ul>
+      </section>
+    </div>
+  );
+
 }
 
 export default App;
