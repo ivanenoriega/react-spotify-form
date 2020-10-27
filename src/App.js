@@ -22,7 +22,7 @@ function App() {
       </header>
       <Nav>
         <Search />
-        <Select title="Genero" />
+        <Select title="Genero" className="filters__item"/>
         <Select title="Popularidad" />
         <Select title="Seguidores" />
         <Favorite />
